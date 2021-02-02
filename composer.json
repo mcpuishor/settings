@@ -1,0 +1,28 @@
+{
+    "name": "mcpuishor/settings",
+    "description": "Database stored settings for applications",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability" : "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mcpuishor\\Settings\\SettingsServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "Robert Tudor",
+            "email": "eu@robert-tudor.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mcpuishor\\Settings\\": "src/"
+        }
+    }
+}
