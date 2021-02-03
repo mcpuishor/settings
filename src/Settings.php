@@ -2,19 +2,12 @@
 
 namespace Mcpuishor\Settings;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Facade;
 
-class Settings extends Model
+class Settings extends Facade
 {
-    public function scopeGroup($query, $groupName)
-    {
-    	return $query->where("group", $groupName);
-    }
-
-    public function scopeSection($query, $sectionName)
-    {
-    	return $query->where("group", "like", "$sectionName.%");
-    } 
-
+  protected static function getFacadeAccessor()
+  {
+    return 'app-settings';
+  }
 }
