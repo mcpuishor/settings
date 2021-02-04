@@ -63,12 +63,6 @@ class SettingsRepository {
 		return Setting::create($attributeCollections);
 	}
 
-	/**
-	 * Save multiple new models and return an array of the instances.
-	 *
-	 * @param  array  $attributeCollections
-	 * @return static
-	 */
 	public static function createMany(array $attributeCollections = array())
 	{
 	    return array_map('self::create', $attributeCollections);

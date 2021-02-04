@@ -6,11 +6,7 @@ use Mcpuishor\Settings\Setting;
 
 class SettingsServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
+
     public function register()
     {
         $this->app->singleton('app-settings', function() {
@@ -18,11 +14,6 @@ class SettingsServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/../migrations');
