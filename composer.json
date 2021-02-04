@@ -1,7 +1,7 @@
 {
     "name": "mcpuishor/settings",
     "description": "Database stored settings for applications",
-    "type": "package",
+    "type": "project",
     "license": "MIT",
     "minimum-stability" : "dev",
     "extra": {
