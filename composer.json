@@ -3,7 +3,7 @@
     "description": "Database stored settings for applications",
     "type": "project",
     "license": "MIT",
-    "minimum-stability" : "stable",
+    "minimum-stability" : "dev",
     "extra": {
         "laravel": {
             "providers": [
