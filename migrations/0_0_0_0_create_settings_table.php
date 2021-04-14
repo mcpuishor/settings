@@ -20,7 +20,7 @@ class CreateSettingsTable extends Migration
             $table->text('value')->nullable();
             $table->string('label')->nullable();
             $table->timestamps();
-            $table->unique(['group', 'name'], "groupsetting_name_unique");
+           // $table->unique(['group', 'name'], "groupsetting_name_unique");
         });
     }
 
