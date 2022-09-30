@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
 {
+    protected $casts = [
+        'values' => 'json',
+    ];
+
     public function scopeGroup($query, $groupName)
     {
     	return $query->where("group", $groupName);
