@@ -11,6 +11,8 @@ class Setting extends Model
         'values' => 'json',
     ];
 
+    protected $guarded = ['id'];
+
     public function scopeGroup($query, $groupName)
     {
     	return $query->where("group", $groupName);
