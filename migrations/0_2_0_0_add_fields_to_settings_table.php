@@ -9,7 +9,7 @@ return new class extends Migration
     {
         Schema::table('settings', function (Blueprint $table) {
           $table->json('values');
-          $tble->string('default');
+          $table->string('default');
         });
     }
 
