@@ -8,7 +8,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('settings', function (Blueprint $table) {
-          $table->json('description');
+          $table->text('description');
         });
     }
 
