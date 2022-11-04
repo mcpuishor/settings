@@ -33,13 +33,18 @@ class SettingsRepository {
 		return $this;
 	}
 
-	public function get($settingName) : string
+	public function get($settingName) : null | string
 	{
-		return $this->setting
+		$setting = $this->setting
 				->group($this->group)
 				->where("name", $settingName)
-				->firstOrFail()
-				->value;
+				->first();
+
+		if (!$setting) {
+			return null;
+		}
+		
+		return $setting->value;
 	}
 
 	public function set($settingName, $value)
